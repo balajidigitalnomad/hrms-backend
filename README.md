@@ -1,8 +1,9 @@
-# HRMS Backend - Spring Boot - Spring Security - JWT - Hibernate - MySql 
+# HRMS Backend 
+##### Spring Boot - Spring Security - JWT - Hibernate - MySql 
 ---
 ### 👨‍💻 Author: **Balaji V. S.**
 
-**Senior Java Solutions Architect & Full-Stack Engineering Lead**
+##### **Senior Java Solutions Architect & Full-Stack Engineering Lead**
 ---
 
 ## Enterprise Human Resource Management System (HRMS)
