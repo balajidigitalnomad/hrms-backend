@@ -37,17 +37,17 @@ Interactive API documentation is provided using Swagger OpenAPI, allowing develo
 | Technology         | Version           |
 | ------------------ | ----------------- |
 | Java               | 21                |
-| Spring Boot        | 3.x               |
-| Spring Security    | 6.x               |
-| Spring Data JPA    | Latest            |
-| Hibernate          | Latest            |
-| MySQL              | 8.x               |
+| Spring Boot        | 3.5.16            |
+| Spring Security    | 3.5.16            |
+| Spring Data JPA    | 3.5.16            |
+| Hibernate          | 6.5.53            |
+| MySQL              | 9.7               |
 | Maven              | Latest            |
-| JWT (JJWT)         | Latest            |
-| Swagger OpenAPI    | springdoc-openapi |
-| MapStruct          | Latest            |
-| Lombok             | Latest            |
-| Jakarta Validation | Latest            |
+| JWT (JJWT)         | 0.12.7            |
+| Swagger OpenAPI    | springdoc-openapi 2.8.9 |
+| MapStruct          | 1.6.3             |
+| Lombok             | 1.18.38           |
+| Jakarta Validation | 3.0.2             |
 
 ---
 
