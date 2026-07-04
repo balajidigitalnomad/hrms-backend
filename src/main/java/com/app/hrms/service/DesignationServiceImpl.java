@@ -6,7 +6,6 @@ import com.app.hrms.exception.ResourceNotFoundException;
 import com.app.hrms.mapper.DesignationMapper;
 import com.app.hrms.repository.DesignationRepository;
 import lombok.RequiredArgsConstructor;
-import org.mapstruct.MappingTarget;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

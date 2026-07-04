@@ -11,19 +11,15 @@ import org.mapstruct.MappingTarget;
 public interface EmployeeMapper {
     @Mapping(target = "department",ignore =true)
     @Mapping(target = "designation", ignore = true)
-    @Mapping(target = "user" , ignore = true)
-    @Mapping(target = "id", ignore = true)
     Employee toEntity(EmployeeRequestDto employeeRequestDto); // obj to entity
 
-    @Mapping(target = "departmentId", source = "department.id")
+    @Mapping(target = "departmentId", source = "department.departmentId")
     @Mapping(target = "departmentName", source ="department.departmentName")
-    @Mapping(target = "designationId", source ="designation.id")
-    @Mapping(target = "designationName", source ="designation.dsignationName")
+    @Mapping(target = "designationId", source ="designation.designationId")
+    @Mapping(target = "designationName", source ="designation.designationName")
     EmployeeResponseDto toDto(Employee employee);
 
     @Mapping(target = "department", ignore = true)
     @Mapping(target = "designation", ignore = true)
-    @Mapping(target = "user" , ignore = true)
-    @Mapping(target = "id", ignore = true)
     void updateEntity(EmployeeRequestDto employeeRequestDto, @MappingTarget Employee employee);
 }

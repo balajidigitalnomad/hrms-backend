@@ -45,18 +45,19 @@ public class User {
     @Column(name = "credentials_non_expired", nullable = false)
     private Boolean credentialsNonExpired = true;
 
-    @NotNull(message = "Employee is required.")  // join owned by employee in User Entity here
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_id", nullable = false, unique = true)
-    private Employee employee;
+    @Column(name = "employee_id")
+    private Long employeeId;
 
-    @NotEmpty(message = "Atleast One Role expected.") //Join owned by roles in User Entity
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "app_user_role",
-            joinColumns = @JoinColumn(name= "user_id"),
+            joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles;
 
+    @Builder.Default
+    @Column(name= "is_active", nullable = false)
+    private Boolean isActive = true;
 }

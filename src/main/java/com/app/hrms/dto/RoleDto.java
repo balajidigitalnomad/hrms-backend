@@ -8,8 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class RoleDto {
-    private Long id;
-    private String roleId;
+    private Long roleId;
     private String roleName;
-    private Boolean active;
+    private Boolean isActive;
 }

@@ -26,25 +26,25 @@ public class EmployeeRequestDto {
     @Email
     private String officeEmail;
 
-    @NotBlank
     @Email
     private String personalEmail;
 
-    @NotBlank
     @Pattern(
             regexp = "^[6-9]\\d{9}$",
             message = "Mobile number should not exceeds 10 digits."
     )
     private String mobileNumber;
-    @NotNull
+
     private Gender gender;
-    @NotNull
+
     private LocalDate birthDate;
-    @NotNull
+
     private LocalDate joiningDate;
-    @NotNull
+
     private Long departmentId;
-    @NotNull
+
     private Long designationId;
+
+    private Boolean isActive;
 
 }

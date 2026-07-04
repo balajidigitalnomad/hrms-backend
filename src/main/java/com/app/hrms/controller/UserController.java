@@ -6,6 +6,7 @@ import com.app.hrms.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,5 +41,12 @@ public class UserController {
     public ResponseEntity<String> deleteUserById(@PathVariable Long id){
         userService.deleteUserById(id);
         return ResponseEntity.ok().body("Delete user Successfully");
+    }
+
+    @GetMapping("/password-hash/{username}")
+    public ResponseEntity<String> getPasswordHash(@PathVariable String username){
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        return ResponseEntity.ok().body(encoder.encode(username));
+
     }
 }

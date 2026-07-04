@@ -11,5 +11,5 @@ public class DesignationDto {
     private Long designationId;
     private String designationCode;
     private String designationName;
-    private Boolean active;
+    private Boolean isActive;
 }

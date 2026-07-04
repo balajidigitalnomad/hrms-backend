@@ -23,8 +23,8 @@ public class Role {
     private String roleName;
 
     @Builder.Default
-    @Column (name="active", nullable = false)
-    private Boolean active = true;
+    @Column (name="is_active", nullable = false)
+    private Boolean isActive = true;
 
     @ManyToMany(mappedBy = "roles")// Join owned by USER Entity and here refers it by roles.
     private Set<User> users;

@@ -33,6 +33,10 @@ public class UserRequestDto {
     @NotNull
     private Boolean credentialsNonExpired;
 
-    @NotBlank
-    private Set<Role> roles;
+    private Long employeeId;
+
+    private Set<Long> roleIds;
+
+    @Builder.Default
+    private Boolean isActive = true;
 }

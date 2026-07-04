@@ -6,7 +6,6 @@ import com.app.hrms.exception.ResourceNotFoundException;
 import com.app.hrms.mapper.RoleMapper;
 import com.app.hrms.repository.RoleRepository;
 import lombok.RequiredArgsConstructor;
-import org.mapstruct.MappingTarget;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,6 +38,7 @@ public class RoleServiceImpl implements RoleService {
     public List<RoleDto> getAllRoles(){
         return roleRepository.findAll().stream().map(roleMapper::toDto).toList();
     }
+
 
     @Override
     public void deleteRoleById(Long id){

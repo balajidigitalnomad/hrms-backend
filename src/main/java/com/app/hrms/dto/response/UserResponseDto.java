@@ -37,6 +37,9 @@ public class UserResponseDto {
     @NotNull
     private Boolean credentialsNonExpired;
 
-    @NotBlank
-    private Set<Role> roles;
+    private Long employeeId;
+
+    private Set<Long> roleIds;
+
+    private Boolean isActive;
 }

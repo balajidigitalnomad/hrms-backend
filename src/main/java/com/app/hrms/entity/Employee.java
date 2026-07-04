@@ -21,7 +21,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employee_id")
-    private Long id;
+    private Long employeeId;
 
     @NotBlank(message = "Employee code required.")
     @Size(max = 20, message = "Employee code should not exceeds 20 Characters.")
@@ -46,12 +46,10 @@ public class Employee {
     @Column(name = "office_email", nullable = false, length = 150, unique = true)
     private String officeEmail;
 
-    @NotBlank(message = "Personal email required.")
     @Email(message = "Invalid Personal email.")
     @Column(name = "personal_email", nullable = false, length = 150, unique = true)
     private String personalEmail;
 
-    @NotBlank(message = "Mobile number required.")
     @Pattern(
             regexp = "^[6-9]\\d{9}$",
             message = "Mobile number should contains 10 digits"
@@ -59,37 +57,30 @@ public class Employee {
     @Column(name = "mobile_number", nullable = false, length = 10, unique = true)
     private String mobileNumber;
 
-
-    @NotNull(message = "Gender required.")
     @Enumerated(EnumType.STRING)
-    @Column(name ="gender", nullable = false)
+    @Column(name ="gender")
     private Gender gender;
 
-    @NotNull(message = "Employee Birth date required.")
     @Past
-    @Column(name = "birth_date", nullable = false)
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
-    @NotNull(message = "Employee Joining date required.")
     @PastOrPresent
-    @Column(name = "joining_date", nullable = false)
+    @Column(name = "joining_date")
     private LocalDate joiningDate;
 
     @Builder.Default
-    @Column(name="active",nullable = false)
-    private Boolean active = true;
+    @Column(name="is_active")
+    private Boolean isActive = true;
 
-    @NotNull(message = "Employee department is required")
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id",  nullable = false)
+    @JoinColumn(name = "department_id")
     private Department department;
 
-    @NotNull(message = "Employee designation is required.")
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "designation_id", nullable = false)
+    @JoinColumn(name = "designation_id")
     private Designation designation;
 
-    @OneToOne(mappedBy = "employee")
-    private User user;
+
 }
 

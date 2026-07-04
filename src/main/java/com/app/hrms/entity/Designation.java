@@ -26,8 +26,8 @@ public class Designation {
     private String designationName;
 
     @Builder.Default
-    @Column (name = "active")
-    private Boolean active =  true;
+    @Column (name = "is_active")
+    private Boolean isActive =  true;
 
     @OneToMany(mappedBy = "designation")
     private Set<Employee> employees;

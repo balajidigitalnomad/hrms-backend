@@ -5,7 +5,6 @@ import com.app.hrms.entity.Department;
 import com.app.hrms.exception.ResourceNotFoundException;
 import com.app.hrms.mapper.DepartmentMapper;
 import com.app.hrms.repository.DepartmentRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class DepartmentServiceImpl implements DepartmentService {
     private final DepartmentRepository departmentRepository;
     private final DepartmentMapper departmentMapper;

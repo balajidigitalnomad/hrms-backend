@@ -26,8 +26,8 @@ public class Department {
     private String departmentName;
 
     @Builder.Default
-    @Column (name="active")
-    private Boolean active = true;
+    @Column (name="is_active")
+    private Boolean isActive = true;
 
     @OneToMany(mappedBy = "department")
     private Set<Employee> employees;
