@@ -143,6 +143,15 @@ Additional HR modules such as Leave Management, Attendance, Payroll, and Recruit
 
 ---
 
+# Screen Shots
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f05e3ce7-77c4-447d-b990-0eb13d2c3d16" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e3b99c10-3f6f-4fc5-9868-1edbdf195541" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f5ea4db9-d0c7-4b80-b053-e8d94a1ceabf" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6f8b9bea-b50a-451e-ac4d-a8c78daba17e" />
+
 # API Documentation
 
 Swagger UI is available after starting the application.
